@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "shapedwaypoints",
+  "version": "${version}",
+  "name": "Xaero's Shaped Waypoints",
+  "description": "Square, circle, polygon, star and custom-shaped waypoints for Xaero's Minimap / World Map.",
+  "authors": ["Biskwuit"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.shapedwaypoints.ShapedWaypointsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "fabric-api": "*",
+    "minecraft": "26.3.x",
+    "java": ">=25"
+  },
+  "recommends": {
+    "xaerominimap": "*",
+    "xaeroworldmap": "*"
+  }
+}
