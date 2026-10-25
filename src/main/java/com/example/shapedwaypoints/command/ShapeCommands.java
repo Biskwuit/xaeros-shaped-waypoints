@@ -47,14 +47,14 @@ public final class ShapeCommands {
             .then(literal("polygon").then(argument("name", word())
                 .then(argument("sides", integer(3, 64)).then(argument("radius", integer(1, 4096))
                     .executes(c -> create(c, "polygon", p -> ShapeGenerator.polygon(
-                            p.getX(), p.getY(), p.getZ(), getInteger(c, "sides"), getInteger(c, "radius"), -90))))))))
+                            p.getX(), p.getY(), p.getZ(), getInteger(c, "sides"), getInteger(c, "radius"), -90)))))))
 
             .then(literal("star").then(argument("name", word())
                 .then(argument("points", integer(3, 32)).then(argument("outer", integer(2, 4096))
                     .then(argument("inner", integer(1, 4096))
                         .executes(c -> create(c, "star", p -> ShapeGenerator.star(
                                 p.getX(), p.getY(), p.getZ(), getInteger(c, "points"),
-                                getInteger(c, "outer"), getInteger(c, "inner")))))))))
+                                getInteger(c, "outer"), getInteger(c, "inner"))))))))) 
 
             // Custom shapes: walk around and record your position as vertices
             .then(literal("custom")
